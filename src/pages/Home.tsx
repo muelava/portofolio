@@ -142,9 +142,9 @@ const Home = () => {
 
                 <div className="grid grid-cols-3 max-w-7xl mx-auto">
                     {Array.from({ length: 3 }).map((_, index: any) => (
-                        <div key={index}>
-                            <img src="" alt="" />
-                        </div>
+                        <Link to={"https://www.figma.com/proto/eXX7gIVdvnK7M725x8pzBg/satu_ilmu_web?node-id=460-337&node-type=canvas&t=SNw5443kIX8pURg5-0&scaling=scale-down-width&content-scaling=fixed&page-id=460%3A336&starting-point-node-id=460%3A337"} key={index}>
+                            <img src="/src/assets/img/satu-ilmu.png" alt="satu-ilmu" className="aspect-video object-contain w-full" />
+                        </Link>
                     ))}
                 </div>
             </section>

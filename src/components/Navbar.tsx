@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
     return (
         <nav className='sticky top-0 w-full flex gap-3 px-4 shadow items-center justify-between z-20 py-3 bg-neutral-900 text-slate-200' style={{ fontFamily: 'Poppins' }}>
             <Link to={'/'} className='flex gap-3 items-center'>
-                <img src="/src/assets/avatars/elang.png" alt="Muhammad Elang Hardifal" className='w-12' />
+                <img src="/assets/avatars/elang.png" alt="Muhammad Elang Hardifal" className='w-12' />
                 <strong className='text-xs md:text-base'>Muhammad Elang Hardifal</strong>
             </Link>
             <ul className='hidden md:flex gap-14 items-center font-semibold'>

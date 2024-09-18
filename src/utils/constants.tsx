@@ -16,7 +16,7 @@ const portofolio = () => [
         id: 2,
         thumbnails: "/assets/img/ruang-nyaman.png",
         title: "Ruang Nyaman",
-        description: "Ruangnyaman.design is an online platform that offers personalized interior design services, helping clients create comfortable and aesthetically pleasing living spaces.",
+        description: "Ruangnyaman.design is an online platform offering personalized interior design services to create comfortable and beautiful living spaces.",
         link: {
             website: "https://ruangnyaman.design/",
             design: null,
@@ -28,11 +28,11 @@ const portofolio = () => [
         id: 3,
         thumbnails: "/assets/img/diggo.png",
         title: "Diggo",
-        description: "Diggo.id is a Point of Sale (POS) system tailored for small and medium-sized enterprises (SMEs), enabling efficient management of sales, inventory, and customer transactions",
+        description: "Diggo.id is a POS system for SMEs, enabling efficient sales, inventory, and transaction management.",
         link: {
             website: "https://demo.diggo.id/",
-            design: null,
-            source: null,
+            design: "https://www.figma.com/proto/9gJhWsDFkXZtLRAgbpdR5g/aplikasi-diggo-(Copy)?node-id=3278-10228&node-type=frame&t=3kG1d0yOAO7yBD3F-1&scaling=scale-down&content-scaling=fixed&page-id=13%3A35365&starting-point-node-id=3278%3A10228&show-proto-sidebar=1",
+            source: "https://github.com/muelava/diggo-landing-page",
         },
         tech: ["Figma", "React", "TailwindCss", "Laravel"]
     }

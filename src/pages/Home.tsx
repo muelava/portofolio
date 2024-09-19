@@ -1,12 +1,12 @@
 import { MdEmail } from "react-icons/md"
 import { Primary, Tertiary } from "../components/Buttons"
 import { Link } from "react-router-dom"
-import { FaDownload, FaFigma, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
+import { FaCode, FaDownload, FaFigma, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
 import { RiInstagramFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
 import { SiShowwcase } from "react-icons/si"
 import { IoLogoIonic, IoLogoJavascript } from "react-icons/io"
 import { BiLogoTypescript } from "react-icons/bi"
-import { IoLogoCapacitor } from "react-icons/io5"
+import { IoCodeSlashOutline, IoLogoCapacitor } from "react-icons/io5"
 import { TbBrandReactNative } from "react-icons/tb"
 import { portofolio } from "../utils/constants"
 import { HiOutlineLink } from "react-icons/hi"
@@ -146,22 +146,30 @@ const Home = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
                     {data.map((item: any) => (
-                        <Link target="_blank" to={item.link?.website} key={item.id}>
+                        <div key={item.id}>
                             <div className="w-full h-56 rounded overflow-hidden group relative" style={{ backgroundImage: `url(${item.thumbnails})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-                                <div className="w-ful h-full flex flex-col pb-4 bg-neutral-950/70 group-hover:bg-neutral-950/80 transition-all group-hover:text-teal-500">
+                                <div className="w-ful h-full flex flex-col pb-4 bg-neutral-950/70 group-hover:bg-neutral-950/80 transition-all group-hover:text-slate-200/50">
                                     <h6 className="font-bold shadow-xl text-xl rounded border-l-4 border-teal-300 ps-3 uppercase mb-2">{item.title}</h6>
                                     <p className="opacity-80 text-sm ms-4">{item?.description}</p>
                                     <div className="flex gap-3 ms-4 mt-auto flex-wrap">
                                         {item.tech?.map((item: any, i: number) => (
-                                            <span key={i} className="text-xs px-1.5 rounded-full py-0.5 font-semibold border text-teal-500/40 border-teal-500/40">{item}</span>
+                                            <span key={i} className="text-xs px-1.5 rounded-full py-0.5 font-semibold border border-dashed text-slate-300/60 border-slate-400/50">{item}</span>
                                         ))}
                                     </div>
                                 </div>
-                                <button className="absolute top-[45%] right-[45%] hidden group-hover:block">
-                                    <span className="border inline-block border-teal-500 hover:scale-110 transition-all p-2 text-teal-500 rounded-full"><HiOutlineLink size={28} /></span>
+                                <button className="absolute top-0 right-0 bottom-0 left-0 hidden group-hover:flex gap-3 justify-center items-center">
+                                    {item.link?.website && (
+                                        <Link to={item.link?.website} target="_blank" className="border inline-block border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-2 text-teal-500 hover:text-slate-200 rounded-full"><HiOutlineLink size={28} /></Link>
+                                    )}
+                                    {item.link?.design && (
+                                        <Link to={item.link?.design} target="_blank" className="border inline-block border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-2 text-teal-500 hover:text-slate-200 rounded-full"><FaFigma size={28} /></Link>
+                                    )}
+                                    {item.link?.source && (
+                                        <Link to={item.link?.source} target="_blank" className="border inline-block border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-2 text-teal-500 hover:text-slate-200 rounded-full"><IoCodeSlashOutline size={28} /></Link>
+                                    )}
                                 </button>
                             </div>
-                        </Link>
+                        </div>
                     ))}
                 </div>
             </section>

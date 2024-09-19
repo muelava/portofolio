@@ -2,7 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+    activeSection: string;
+    scrollToSection: (section: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }) => {
     return (
         <nav className='sticky top-0 w-full flex gap-3 px-4 shadow items-center justify-between z-20 py-3 bg-neutral-900 text-slate-200' style={{ fontFamily: 'Poppins' }}>
             <Link to={'/'} className='flex gap-3 items-center'>
@@ -11,20 +16,42 @@ const Navbar: React.FC = () => {
             </Link>
             <ul className='hidden md:flex gap-14 items-center font-semibold'>
                 <li>
-                    <Link to="/" className='text-teal-600'>Home</Link>
+                    <button
+                        onClick={() => scrollToSection('home')}
+                        className={activeSection === 'home' ? 'text-teal-600' : 'text-slate-200'}
+                    >
+                        Home
+                    </button>
                 </li>
                 <li>
-                    <Link to="#">Projects</Link>
+                    <button
+                        onClick={() => scrollToSection('projects')}
+                        className={activeSection === 'projects' ? 'text-teal-600' : 'text-slate-200'}
+                    >
+                        Projects
+                    </button>
                 </li>
                 <li>
-                    <Link to="#">Skills</Link>
+                    <button
+                        onClick={() => scrollToSection('skills')}
+                        className={activeSection === 'skills' ? 'text-teal-600' : 'text-slate-200'}
+                    >
+                        Skills
+                    </button>
                 </li>
                 <li>
-                    <Link to="#">Contact</Link>
+                    <button
+                        onClick={() => scrollToSection('certificates')}
+                        className={activeSection === 'certificates' ? 'text-teal-600' : 'text-slate-200'}
+                    >
+                        Certificates
+                    </button>
                 </li>
             </ul>
             <div>
-                <Link to="https://wa.me/6282115100979" target='_blank' className='bg-teal-600 px-5 text-sm md:text-base font-semibold py-2 text-nowrap rounded-full flex gap-2 items-center'> <FaWhatsapp className='text-xl' /> Hire Me</Link>
+                <Link to="https://wa.me/6282115100979" target='_blank' className='bg-teal-600 px-5 text-sm md:text-base font-semibold py-2 text-nowrap rounded-full flex gap-2 items-center'>
+                    <FaWhatsapp className='text-xl' /> Hire Me
+                </Link>
             </div>
         </nav>
     );

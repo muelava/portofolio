@@ -1,8 +1,8 @@
 import { MdEmail } from "react-icons/md"
 import { Primary, Tertiary } from "../components/Buttons"
 import { Link } from "react-router-dom"
-import { FaDownload, FaFigma, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
-import { RiInstagramFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
+import { FaDownload, FaFigma, FaFilePdf, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
+import { RiExternalLinkFill, RiInstagramFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
 import { SiShowwcase } from "react-icons/si"
 import { IoLogoIonic, IoLogoJavascript } from "react-icons/io"
 import { BiLogoTypescript } from "react-icons/bi"
@@ -11,13 +11,22 @@ import { TbBrandReactNative } from "react-icons/tb"
 import { portofolio } from "../utils/constants"
 import { HiOutlineLink } from "react-icons/hi"
 
-const Home = () => {
+interface HomeProps {
+    sectionRefs: {
+        home: React.RefObject<HTMLDivElement>;
+        projects: React.RefObject<HTMLDivElement>;
+        skills: React.RefObject<HTMLDivElement>;
+        certificates: React.RefObject<HTMLDivElement>;
+    };
+}
+
+const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
     const data: any = portofolio();
 
     return (
         <>
             {/* HERO */}
-            <section className="flex flex-col md:flex-row items-center gap-10 md:gap-0 justify-between py-10 px-4 md:px-0" style={{ fontFamily: 'Poppins' }}>
+            <section ref={sectionRefs.home} id="home" className="flex flex-col md:flex-row items-center gap-10 md:gap-0 justify-between py-10 px-4 md:px-0" style={{ fontFamily: 'Poppins' }}>
                 <div className="max-w-xl mx-auto">
                     <h2 className="text-5xl font-extrabold" style={{ lineHeight: "1.5" }}>
                         <small className="text-3xl">Hi, I'm <span className="text-teal-500">Elang Hardifal</span></small>
@@ -62,7 +71,7 @@ const Home = () => {
             </div>
 
             {/* Skills */}
-            <section className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
+            <section ref={sectionRefs.skills} id="skills" className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
                 <h3 className="text-4xl font-bold text-center mb-14">Skills</h3>
                 <ul className="grid grid-cols-3 gap-y-20 justify-center max-w-7xl mx-auto">
                     <li className="flex justify-center">
@@ -141,7 +150,7 @@ const Home = () => {
             </section>
 
             {/* Projects */}
-            <section className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
+            <section ref={sectionRefs.projects} id="projects" className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
                 <h3 className="text-4xl font-bold text-center mb-14">Projects</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
@@ -171,6 +180,33 @@ const Home = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+                <div className="text-center">
+                    <div className="inline-block mt-10">
+                        <Tertiary link="https://www.prokoin.com/portfolio" target="_blank">
+                            More Projects <RiExternalLinkFill />
+                        </Tertiary>
+                    </div>
+                </div>
+            </section>
+
+            {/* Certificate */}
+            <section ref={sectionRefs.certificates} id="certificates" className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
+                <h3 className="text-4xl font-bold text-center mb-14">Certificates</h3>
+
+                <div className="flex justify-center gap-5 max-w-7xl mx-auto">
+                    <Link target="_blank" to="https://drive.google.com/file/d/1rxMJ6WCyZP9dmplLodbpeMVdO9qc0fXj/view?usp=sharing" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all px-5 py-2.5 rounded-full flex gap-2 items-center">
+                        <FaFilePdf className="text-2xl" />
+                        <span className="text-teal-500">Participant</span>
+                    </Link>
+                    <Link target="_blank" to="https://drive.google.com/file/d/1LA2-9gkoJp7qlKeJASfTqPkllXRWT2oQ/view?usp=sharing" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all px-5 py-2.5 rounded-full flex gap-2 items-center">
+                        <FaFilePdf className="text-2xl" />
+                        <span className="text-teal-500">BNSP</span>
+                    </Link>
+                    <Link target="_blank" to="https://drive.google.com/file/d/14fFlCsh_AN_JTQf5Y1rOGqF4ae0QcTxe/view?usp=sharing" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all px-5 py-2.5 rounded-full flex gap-2 items-center">
+                        <FaFilePdf className="text-2xl" />
+                        <span className="text-teal-500">Employee</span>
+                    </Link>
                 </div>
             </section>
 

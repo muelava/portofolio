@@ -1,7 +1,7 @@
 import { MdEmail } from "react-icons/md"
 import { Primary, Tertiary } from "../components/Buttons"
 import { Link } from "react-router-dom"
-import { FaCode, FaDownload, FaFigma, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
+import { FaDownload, FaFigma, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
 import { RiInstagramFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
 import { SiShowwcase } from "react-icons/si"
 import { IoLogoIonic, IoLogoJavascript } from "react-icons/io"

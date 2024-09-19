@@ -194,7 +194,7 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
             <section ref={sectionRefs.certificates} id="certificates" className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
                 <h3 className="text-4xl font-bold text-center mb-14">Certificates</h3>
 
-                <div className="flex justify-center gap-5 max-w-7xl mx-auto">
+                <div className="flex justify-center gap-5 max-w-7xl mx-auto flex-wrap">
                     <Link target="_blank" to="https://drive.google.com/file/d/1rxMJ6WCyZP9dmplLodbpeMVdO9qc0fXj/view?usp=sharing" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all px-5 py-2.5 rounded-full flex gap-2 items-center">
                         <FaFilePdf className="text-2xl" />
                         <span className="text-teal-500">Participant</span>

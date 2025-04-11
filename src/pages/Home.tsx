@@ -41,7 +41,7 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
                         <Primary link="mailto:muelava@gmail.com">
                             <MdEmail /> Email Me
                         </Primary>
-                        <Tertiary link="https://drive.google.com/file/d/1ry1uoseK2NABo6DQpcgl8bor3DhCUtxz/view?usp=sharing" target="_blank">
+                        <Tertiary link="https://drive.google.com/file/d/1kSgyWSsU4--Ljj4_q4pwA9E9JPPXd6uS/view?usp=sharing" target="_blank">
                             <FaDownload /> Download CV
                         </Tertiary>
                     </div>

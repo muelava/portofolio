@@ -35,7 +35,9 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
                         <br />
                         UI/UX <span className="text-teal-500">Designer</span>
                     </h2>
-                    <p className="opacity-80 font-light leading-normal">I am from Indonesia and I am a Content Creator. I have worked at a financial technology company in Indonesia as a Front-end Developer for over two years. Additionally, I have been freelancing for more than three years, and I am now looking forward to collaborating with you!</p>
+                    <p className="opacity-80 font-light leading-normal">
+                        I am from Indonesia and I am a Content Creator. I have worked at a financial technology company in Indonesia as a Front-end Developer for over two years. Additionally, I have been freelancing for more than three years, and I am now looking forward to collaborating with you!
+                    </p>
                     <br />
                     <div className="flex max-w-xs gap-3">
                         <Primary link="mailto:muelava@gmail.com">
@@ -156,9 +158,9 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
                     {data.map((item: any) => (
                         <div key={item.id}>
-                            <div className="w-full h-56 rounded overflow-hidden group relative" style={{ backgroundImage: `url(${item.thumbnails})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
-                                <div className="w-ful h-full flex flex-col pb-4 bg-neutral-950/70 group-hover:bg-neutral-950/80 transition-all group-hover:text-slate-200/50">
-                                    <h6 className="font-bold shadow-xl text-xl rounded border-l-4 border-teal-300 ps-3 uppercase mb-2">{item.title}</h6>
+                            <div className="w-full h-56 rounded overflow-hidden group relative hover:scale-105 transition-all duration-300" style={{ backgroundImage: `url(${item.thumbnails})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
+                                <div className="w-ful h-full flex flex-col pb-4 bg-neutral-950/60 group-hover:bg-neutral-950/80 transition-all duration-300 group-hover:text-slate-200/50">
+                                    <h6 className="font-bold shadow-xl text-lg rounded border-l-4 border-teal-300 ps-3 uppercase mb-2">{item.title}</h6>
                                     <p className="opacity-80 text-sm ms-4">{item?.description}</p>
                                     <div className="flex gap-3 ms-4 mt-auto flex-wrap">
                                         {item.tech?.map((item: any, i: number) => (
@@ -205,7 +207,7 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
                     </Link>
                     <Link target="_blank" to="https://drive.google.com/file/d/14fFlCsh_AN_JTQf5Y1rOGqF4ae0QcTxe/view?usp=sharing" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all px-5 py-2.5 rounded-full flex gap-2 items-center">
                         <FaFilePdf className="text-2xl" />
-                        <span className="text-teal-500">Employee</span>
+                        <span className="text-teal-500">Award</span>
                     </Link>
                 </div>
             </section>

@@ -10,6 +10,8 @@ import { IoCodeSlashOutline, IoLogoCapacitor } from "react-icons/io5"
 import { TbBrandReactNative } from "react-icons/tb"
 import { portofolio } from "../utils/constants"
 import { HiOutlineLink } from "react-icons/hi"
+import SplitText from "../components/Splite"
+import GradientText from "../components/GradientText"
 
 interface HomeProps {
     sectionRefs: {
@@ -29,7 +31,16 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
             <section ref={sectionRefs.home} id="home" className="flex flex-col md:flex-row items-center gap-10 md:gap-0 justify-between py-10 px-4 md:px-0" style={{ fontFamily: 'Poppins' }}>
                 <div className="max-w-xl mx-auto">
                     <h2 className="text-5xl font-extrabold" style={{ lineHeight: "1.5" }}>
-                        <small className="text-3xl">Hi, I'm <span className="text-teal-500">Elang Hardifal</span></small>
+                        <small className="text-3xl">Hi, I'm <span className="text-teal-500">
+                            <SplitText
+                                text="Elang Hardifal"
+                                delay={150}
+                                animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                                animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                                threshold={0.2}
+                                rootMargin="-50px"
+                            />
+                        </span></small>
                         <br />
                         Web <span className="text-teal-500">Developer</span> &
                         <br />
@@ -55,7 +66,15 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
 
             {/* Connect With */}
             <div className="max-w-md mx-auto" style={{ fontFamily: 'Poppins' }}>
-                <p className="mb-5 text-center">Connected With</p>
+                <p className="mb-5 text-center">
+                    <GradientText
+                        colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                        animationSpeed={3}
+                        showBorder={false}
+                    >
+                        Connected With
+                    </GradientText>
+                </p>
                 <ul className="flex gap-3 justify-center text-center">
                     <li>
                         <Link target="_blank" to="https://www.linkedin.com/in/muhammad-elang-hardifal-866735169/" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all p-3 rounded-full inline-block"><FaLinkedinIn className="text-2xl" /></Link>
@@ -74,7 +93,9 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
 
             {/* Skills */}
             <section ref={sectionRefs.skills} id="skills" className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
-                <h3 className="text-4xl font-bold text-center mb-14">Skills</h3>
+                <h3 className="text-4xl font-bold text-center mb-14">
+                    Skills
+                </h3>
                 <ul className="grid grid-cols-3 gap-y-20 justify-center max-w-7xl mx-auto">
                     <li className="flex justify-center">
                         <div className="gap-2 opacity-70 hover:opacity-90 transition-opacity inline-block select-none">
@@ -153,7 +174,9 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
 
             {/* Projects */}
             <section ref={sectionRefs.projects} id="projects" className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
-                <h3 className="text-4xl font-bold text-center mb-14">Projects</h3>
+                <h3 className="text-4xl font-bold text-center mb-14">
+                    Projects
+                </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
                     {data.map((item: any) => (
@@ -194,7 +217,9 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
 
             {/* Certificate */}
             <section ref={sectionRefs.certificates} id="certificates" className="mt-28 px-4" style={{ fontFamily: 'Poppins' }}>
-                <h3 className="text-4xl font-bold text-center mb-14">Certificates</h3>
+                <h3 className="text-4xl font-bold text-center mb-14">
+                    Certificates
+                </h3>
 
                 <div className="flex justify-center gap-5 max-w-7xl mx-auto flex-wrap">
                     <Link target="_blank" to="https://drive.google.com/file/d/1rxMJ6WCyZP9dmplLodbpeMVdO9qc0fXj/view?usp=sharing" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all px-5 py-2.5 rounded-full flex gap-2 items-center">

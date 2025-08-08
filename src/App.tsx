@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import React, { useState, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "@fontsource/poppins/200.css";
 import "@fontsource/poppins/300.css";
 import "@fontsource/poppins/400.css";
@@ -11,9 +11,10 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
+import CvPage from "./pages/Cv";
 
 const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>('home');
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   const sectionRefs: any = {
     home: useRef<HTMLDivElement>(null),
@@ -24,7 +25,7 @@ const App: React.FC = () => {
 
   const scrollToSection = (section: string) => {
     setActiveSection(section);
-    sectionRefs[section].current?.scrollIntoView({ behavior: 'smooth' });
+    sectionRefs[section].current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -32,6 +33,7 @@ const App: React.FC = () => {
       <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
       <Routes>
         <Route path="/" element={<Home sectionRefs={sectionRefs} />} />
+        <Route path="/my-cv" element={<CvPage />} />
       </Routes>
       <Footer />
     </Router>

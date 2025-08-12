@@ -67,7 +67,7 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
 
             {/* Connect With */}
             <div className="max-w-md mx-auto" style={{ fontFamily: 'Poppins' }}>
-                <p className="mb-5 text-center">
+                <div className="mb-5 text-center">
                     <GradientText
                         colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                         animationSpeed={3}
@@ -75,7 +75,7 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
                     >
                         Connected With
                     </GradientText>
-                </p>
+                </div>
                 <ul className="flex gap-3 justify-center text-center">
                     <li>
                         <Link target="_blank" to="https://www.linkedin.com/in/muhammad-elang-hardifal-866735169/" title="Linkedin" className="bg-teal-800/20 hover:bg-teal-800/40 text-teal-600 hover:text-teal-500 transition-all p-3 rounded-full inline-block"><FaLinkedinIn className="text-2xl" /></Link>

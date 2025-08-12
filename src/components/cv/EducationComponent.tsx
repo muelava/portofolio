@@ -25,10 +25,10 @@ const EducationComponent = () => {
             <div className="flex justify-between items-start">
               <div>
                 <p className="text-lg font-semibold">{item.degree}</p>
-                <small className="font-light block text-gray-400">
+                <small className="font-light block text-neutral-400 print:text-neutral-700">
                   {item.campus} | {formatDate(item.startDate)} - {formatDate(item.endDate)}
                 </small>
-                <small className="font-light block text-gray-400">Grade: {item.grade}</small>
+                <small className="font-light block text-neutral-400 print:text-neutral-700">Grade: {item.grade}</small>
               </div>
             </div>
             <article className="text-sm prose leading-6 my-3 prose" dangerouslySetInnerHTML={{ __html: item.description }} />

@@ -25,10 +25,10 @@ const CertificateComponent = () => {
             <div className="flex justify-between items-start">
               <div>
                 <p className="text-lg font-semibold">{item.title}</p>
-                <small className="font-light block text-gray-400">
+                <small className="font-light block text-neutral-400 print:text-neutral-700">
                   {item.organizer} | {formatDate(item.startDate)} - {formatDate(item.endDate)}
                 </small>
-                <small className="font-light block text-gray-400">Grade: {item.certificateNo}</small>
+                <small className="font-light block text-neutral-400 print:text-neutral-700">Grade: {item.certificateNo}</small>
               </div>
             </div>
           </div>

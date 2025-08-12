@@ -6,6 +6,7 @@ import CertificateComponent from "../components/cv/CertificateComponent";
 import SkillComponent from "../components/cv/SkillComponent";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
+import { Whatsapp } from "iconsax-reactjs";
 
 const CvPage = () => {
   const componentRef = useRef<HTMLElement>(null);
@@ -70,8 +71,14 @@ const CvPage = () => {
             <p className="text-sm font-light my-1.5 md:my-1 text-center md:text-start">Frontend Engineer</p>
             <ul className="flex flex-col md:flex-row gap-0.5 md:gap-3 items-center">
               <li className="flex items-center gap-x-1 text-[11px] md:text-xs">
+                <Whatsapp className="size-[10px] md:size-3" />
+                <a href="https://wa.me/6282115100979" target="_blank">
+                  +62 8211-5100-979
+                </a>
+              </li>
+              <li className="flex items-center gap-x-1 text-[11px] md:text-xs">
                 <Mail className="size-[10px] md:size-3" />
-                <a href="#" target="_blank">
+                <a href="mailto:muelava@gmail.com" target="_blank">
                   muelava@gmail.com
                 </a>
               </li>

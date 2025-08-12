@@ -14,6 +14,7 @@ export type ExperienceData = {
 };
 
 export type EducationData = {
+  logo: string;
   degree: string;
   campus: string;
   startDate: string;
@@ -60,7 +61,7 @@ resolving UI-related issues while maintaining performance across platforms`;
 
 export const experienceData: ExperienceData[] = [
   {
-    logo: "",
+    logo: "stafbook.png",
     jobAs: "Frontend Engineer",
     company: "Staf Book",
     startDate: "2025-03-01",
@@ -73,7 +74,7 @@ a data synchronization mechanism to automatically update data once back online. 
 collaborated closely with the backend team to design and integrate APIs for smooth frontendbackend interaction.`,
   },
   {
-    logo: "",
+    logo: "danamart.png",
     jobAs: "Frontend Developer",
     company: "PT. Dana Aguna Nusantara",
     startDate: "2022-03-01",
@@ -87,21 +88,22 @@ optimize and maintain existing applications to improve performance, user experie
 cross-platform compatibility.`,
   },
   {
-    logo: "",
+    logo: "ioda.png",
     jobAs: "Frontend Developer",
     company: "Ioda Academy",
     startDate: "2024-12-01",
     endDate: "2025-03-01",
-    techStack: ["Bootstrap", "jQuery", "Rest API", "Figma", "JavaScript", "React Native", "Webpack", "Apache Cordova", "Tailwind Css", "Vue Js", "React Js"],
-    description: `Responsible for designing and implementing user interfaces for both web and mobile
-applications, ensuring they are visually appealing, responsive, and functionally robust.
-Collaborate with cross-functional teams to translate project requirements into high quality
-code using technologies like React, JavaScript, Tailwind Css, Cordova, and Ionic. Continuously
-optimize and maintain existing applications to improve performance, user experience, and
-cross-platform compatibility.`,
+    techStack: ["Tailwind Css", "Shadcn UI", "Typescript", "Next.Js"],
+    description: `As a Frontend Developer at Ioda Academy, I am responsible for developing and maintaining
+various features of the e-learning platform, including the Project Training, Project Detail, and
+Profile pages. I focus on delivering a smooth and responsive user experience using modern
+frontend technologies.<br/>
+- Develop and maintain Ioda Academy s e-learning platform.<br/>
+- Build and enhance Project Training, Project Detail, and Profile pages.<br/>
+- Tech stack: Next.js, ShadCN UI, TypeScript, Tailwind CSS.`,
   },
   {
-    logo: "",
+    logo: "prokoin.png",
     jobAs: "Lead Frontend Developer",
     company: "Prokoin",
     startDate: "2022-01-01",
@@ -112,7 +114,7 @@ cross-platform compatibility.`,
 - Oversaw the entire development process to ensure projects were on track, met performance standards, and were responsive across dierent platforms.`,
   },
   {
-    logo: "",
+    logo: "mfg.png",
     jobAs: "UI/UX Designer & Frontend Developer",
     company: "PT. Mitra Fesyen Global",
     startDate: "2021-10-01",
@@ -126,6 +128,7 @@ cross-platform compatibility.`,
 
 export const educationData: EducationData[] = [
   {
+    logo: "unpam.png",
     degree: "Bachelor's in Information Technology",
     campus: "Pamulang University",
     startDate: "2017-09-01",
@@ -136,7 +139,8 @@ interface design. Developed skills in frontend programming using React and backe
 development with Node.js, as well as applying UI/UX principles across various design projects.`,
   },
   {
-    degree: "High School Diploma atau Vocational High School Diploma in Computer and Network Engineering atau Computer and Networking",
+    logo: "smkn1p.png",
+    degree: "Vocational High School Diploma in Computer and Network Engineering",
     campus: "SMK Negeri 1 Padaherang",
     startDate: "2014-06-01",
     endDate: "2017-06-01",

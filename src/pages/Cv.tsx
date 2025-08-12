@@ -1,14 +1,59 @@
-import { Mail, MapPin, SquareTerminal } from "lucide-react";
+import { Mail, MapPin, Printer, SquareTerminal } from "lucide-react";
 import { aboutMe, socialLinks } from "../libs/cvData";
 import ExperienceComponent from "../components/cv/ExperienceComponent";
 import EducationComponent from "../components/cv/EducationComponent";
 import CertificateComponent from "../components/cv/CertificateComponent";
 import SkillComponent from "../components/cv/SkillComponent";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 const CvPage = () => {
+  const componentRef = useRef<HTMLElement>(null);
+
+  const handlePrint = useReactToPrint({
+    contentRef: componentRef,
+    documentTitle: "Muhammad_Elang_Hardifal_CV",
+    pageStyle: `
+      @page {
+        size: A2;
+        margin: 15mm 5mm;
+        @top-left { content: ""; }
+        @top-center { content: ""; }
+        @top-right { content: ""; }
+        @bottom-left { content: ""; }
+        @bottom-center { content: ""; }
+        @bottom-right { content: ""; }
+      }
+      
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          color-adjust: exact;
+        }
+        
+        .no-print {
+          display: none !important;
+        }
+        
+        .print-break {
+          page-break-before: always;
+        }
+        
+        .avoid-break {
+          page-break-inside: avoid;
+        }
+      }
+    `,
+  });
+
   return (
     <>
-      <section className="max-w-7xl mx-auto p-4">
+      <button onClick={handlePrint} className="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors">
+        <Printer size={16} />
+        Print CV
+      </button>
+
+      <section className="max-w-7xl mx-auto p-4" ref={componentRef}>
         {/* ====== PROFILE ====== */}
         <div className="flex gap-x-10 items-center">
           <img src="/assets/img/elang-hero.png" alt="elang_fal" className="size-24 rounded-full object-contain border-2 border-teal-500" />

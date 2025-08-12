@@ -1,4 +1,4 @@
-import { GraduationCap } from "lucide-react";
+import { Award } from "lucide-react";
 import { certificateData } from "../../libs/cvData";
 
 const CertificateComponent = () => {
@@ -18,7 +18,7 @@ const CertificateComponent = () => {
         <div key={index} className="flex gap-x-3 mb-3">
           <div>
             <span className="bg-teal-500/20 size-12 flex items-center justify-center rounded-full relative">
-              <GraduationCap size={24} className="text-teal-500" />
+              <Award size={24} className="text-teal-500" />
             </span>
           </div>
           <div className="flex-auto">

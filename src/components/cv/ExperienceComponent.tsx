@@ -1,4 +1,3 @@
-import { Building } from "lucide-react";
 import { experienceData, ExperienceData } from "../../libs/cvData";
 
 // Function untuk menghitung durasi kerja
@@ -37,7 +36,7 @@ const sortExperiencesByDate = (experiences: ExperienceData[]) => {
   return experiences.sort((a, b) => {
     const dateA = new Date(a.startDate);
     const dateB = new Date(b.startDate);
-    return dateB.getTime() - dateA.getTime(); // Descending order (terbaru di atas)
+    return dateB.getTime() - dateA.getTime();
   });
 };
 
@@ -51,9 +50,10 @@ const ExperienceComponent = () => {
         <>
           <div key={index} className="flex gap-x-3 mb-5">
             <div>
-              <span className="bg-teal-500/20 size-12 flex items-center justify-center rounded-full relative">
+              {/* <span className="bg-teal-500/20 size-12 flex items-center justify-center rounded-full relative">
                 <Building size={24} className="text-teal-500" />
-              </span>
+              </span> */}
+              <img src={`/assets/companies/${experience.logo}`} alt={experience.logo} className="size-12 min-w-12 w-12 object-contain" />
             </div>
             <div className="flex-auto">
               <div className="flex justify-between items-start">

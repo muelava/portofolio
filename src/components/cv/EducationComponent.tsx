@@ -1,4 +1,3 @@
-import { GraduationCap } from "lucide-react";
 import { educationData } from "../../libs/cvData";
 
 const EducationComponent = () => {
@@ -17,9 +16,10 @@ const EducationComponent = () => {
       {educationData.map((item, index) => (
         <div key={index} className="flex gap-x-3">
           <div>
-            <span className="bg-teal-500/20 size-12 flex items-center justify-center rounded-full relative">
+            {/* <span className="bg-teal-500/20 size-12 flex items-center justify-center rounded-full relative">
               <GraduationCap size={24} className="text-teal-500" />
-            </span>
+            </span> */}
+            <img src={`/assets/educations/${item.logo}`} alt={item.logo} className="size-12 min-w-12 w-12 object-contain" />
           </div>
           <div className="flex-auto">
             <div className="flex justify-between items-start">

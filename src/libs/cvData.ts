@@ -64,7 +64,7 @@ export const experienceData: ExperienceData[] = [
     logo: "stafbook.png",
     jobAs: "Frontend Engineer",
     company: "Staf Book",
-    startDate: "2025-03-01",
+    startDate: "2025-05-01",
     endDate: "",
     techStack: ["Tailwind Css", "React", "Tauri", "TypeScript", "Zustand", "IndexDB", "Tanstack"],
     description: `As a Frontend Engineer at Company A, I developed cross-platform desktop applications for

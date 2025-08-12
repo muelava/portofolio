@@ -47,12 +47,12 @@ const ExperienceComponent = () => {
     <div>
       <p className="text-lg font-semibold mb-8">Experiences</p>
       {sortedExperiences.map((experience, index) => (
-        <>
+        <div key={index}>
         {/* special case - page break */}
         {experience.company === "Prokoin" && <div className="print-break" />}
 
         {/* render item */}
-        <div key={index} className="flex gap-x-3 mb-5">
+        <div className="flex gap-x-3 mb-5">
           <div>
             {/* <span className="bg-teal-500/20 size-12 flex items-center justify-center rounded-full relative">
                 <Building size={24} className="text-teal-500" />
@@ -81,7 +81,7 @@ const ExperienceComponent = () => {
             </div>
           </div>
         </div>
-        </>
+        </div>
       ))}
     </div>
   );

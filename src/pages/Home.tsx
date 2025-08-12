@@ -1,7 +1,7 @@
 import { MdEmail } from "react-icons/md"
 import { Primary, Tertiary } from "../components/Buttons"
 import { Link } from "react-router-dom"
-import { FaDownload, FaFigma, FaFilePdf, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
+import { FaFigma, FaFilePdf, FaGitAlt, FaGithub, FaHtml5, FaLaravel, FaLinkedinIn, FaReact } from "react-icons/fa"
 import { RiExternalLinkFill, RiInstagramFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri"
 import { SiShowwcase } from "react-icons/si"
 import { IoLogoIonic, IoLogoJavascript } from "react-icons/io"
@@ -12,6 +12,7 @@ import { portofolio } from "../utils/constants"
 import { HiOutlineLink } from "react-icons/hi"
 import SplitText from "../components/Splite"
 import GradientText from "../components/GradientText"
+import { Eye } from "lucide-react"
 
 interface HomeProps {
     sectionRefs: {
@@ -54,8 +55,8 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
                         <Primary link="mailto:muelava@gmail.com">
                             <MdEmail /> Email Me
                         </Primary>
-                        <Tertiary link="https://drive.google.com/file/d/1Yk6yA60jw6PxsBmiLoXZQD9TfdBQpI0m/view?usp=sharing" target="_blank">
-                            <FaDownload /> Download CV
+                        <Tertiary link="/my-cv">
+                            <Eye /> View CV
                         </Tertiary>
                     </div>
                 </div>

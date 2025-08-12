@@ -1,4 +1,4 @@
-import { Mail, MapPin, Printer, SquareTerminal } from "lucide-react";
+import { Download, Mail, MapPin, Printer, SquareTerminal } from "lucide-react";
 import { aboutMe, socialLinks } from "../libs/cvData";
 import ExperienceComponent from "../components/cv/ExperienceComponent";
 import EducationComponent from "../components/cv/EducationComponent";
@@ -48,10 +48,18 @@ const CvPage = () => {
 
   return (
     <>
-      <button onClick={handlePrint} className="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg shadow-lg transition-colors">
-        <Printer size={16} />
-        Print CV
-      </button>
+      <div className="fixed bottom-0 left-0 right-0 p-3 bg-neutral-900 shadow-xl">
+        <div className="grid grid-cols-2 gap-x-3 max-w-7xl mx-auto">
+          <button onClick={handlePrint} className="flex items-center justify-center gap-2 border border-teal-600 hover:bg-teal-700 text-teal-600 hover:text-white p-4 rounded-lg shadow-lg transition-colors">
+            <Printer size={16} />
+            Print CV
+          </button>
+          <button onClick={handlePrint} className="flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white p-4 rounded-lg shadow-lg transition-colors">
+            <Download size={16} />
+            Download CV
+          </button>
+        </div>
+      </div>
 
       <section className="max-w-7xl mx-auto p-4" ref={componentRef}>
         {/* ====== PROFILE ====== */}

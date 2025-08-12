@@ -12,7 +12,7 @@ const CvPage = () => {
 
   const handlePrint = useReactToPrint({
     contentRef: componentRef,
-    documentTitle: "Muhammad_Elang_Hardifal_CV",
+    documentTitle: "CV_Muhammad_Elang_Hardifal_" + Date.now(),
     pageStyle: `
       @page {
         size: A2;
@@ -48,13 +48,13 @@ const CvPage = () => {
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 p-3 bg-neutral-900 shadow-xl">
-        <div className="grid grid-cols-2 gap-x-3 max-w-7xl mx-auto">
-          <button onClick={handlePrint} className="flex items-center justify-center gap-2 border border-teal-600 hover:bg-teal-700 text-teal-600 hover:text-white p-4 rounded-lg shadow-lg transition-colors">
+      <div className="fixed bottom-0 left-0 right-0 p-3 bg-neutral-900 shadow-xl z-30">
+        <div className="grid grid-cols-1 gap-x-3 max-w-7xl mx-auto">
+          <button onClick={handlePrint} className="flex items-center justify-center gap-2 border border-teal-600 hover:bg-teal-700 text-teal-600 hover:text-white p-4 rounded-lg shadow-lg transition-colors disabled:pointer-events-none disabled:opacity-60">
             <Printer size={16} />
             Print CV
           </button>
-          <button onClick={handlePrint} className="flex items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white p-4 rounded-lg shadow-lg transition-colors">
+          <button onClick={handlePrint} className="hidden items-center justify-center gap-2 bg-teal-600 hover:bg-teal-700 text-white p-4 rounded-lg shadow-lg transition-colors disabled:pointer-events-none disabled:opacity-60">
             <Download size={16} />
             Download CV
           </button>
@@ -63,26 +63,26 @@ const CvPage = () => {
 
       <section className="max-w-7xl mx-auto p-4" ref={componentRef}>
         {/* ====== PROFILE ====== */}
-        <div className="flex gap-x-10 items-center">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center">
           <img src="/assets/img/elang-hero.png" alt="elang_fal" className="size-24 rounded-full object-contain border-2 border-teal-500" />
           <div>
-            <p className="font-semibold text-lg">Muhammad Elang Hardifal</p>
-            <p className="text-sm font-light my-1">Frontend Engineer</p>
-            <ul className="flex gap-x-3 items-center">
-              <li className="flex items-center gap-x-1 text-xs">
-                <Mail size={12} />
+            <p className="font-semibold text-lg text-center md:text-start">Muhammad Elang Hardifal</p>
+            <p className="text-sm font-light my-1.5 md:my-1 text-center md:text-start">Frontend Engineer</p>
+            <ul className="flex flex-col md:flex-row gap-0.5 md:gap-3 items-center">
+              <li className="flex items-center gap-x-1 text-[11px] md:text-xs">
+                <Mail className="size-[10px] md:size-3" />
                 <a href="#" target="_blank">
                   muelava@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-x-1 text-xs">
-                <MapPin size={12} />
+              <li className="flex items-center gap-x-1 text-[11px] md:text-xs">
+                <MapPin className="size-[10px] md:size-3" />
                 <a href="#" target="_blank">
                   East Jakarta, Indonesia
                 </a>
               </li>
-              <li className="flex items-center gap-x-1 text-xs">
-                <SquareTerminal size={12} />
+              <li className="flex items-center gap-x-1 text-[11px] md:text-xs">
+                <SquareTerminal className="size-[10px] md:size-3" />
                 <a href="#" target="_blank">
                   4 Years Experience
                 </a>

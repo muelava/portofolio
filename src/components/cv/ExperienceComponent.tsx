@@ -55,10 +55,10 @@ const ExperienceComponent = () => {
             <img src={`/assets/companies/${experience.logo}`} alt={experience.logo} className="size-12 min-w-12 w-12 object-contain" />
           </div>
           <div className="flex-auto">
-            <div className="flex justify-between items-start">
+            <div className="flex flex-col md:flex-row justify-between items-start">
               <div>
                 <p className="text-lg font-semibold">{experience.jobAs}</p>
-                <small className="font-light text-gray-400">{experience.company}</small>
+                <small className="font-light text-neutral-400 print:text-neutral-600">{experience.company}</small>
               </div>
               <div>
                 <span className="text-xs">

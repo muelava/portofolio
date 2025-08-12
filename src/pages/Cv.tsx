@@ -7,13 +7,15 @@ import SkillComponent from "../components/cv/SkillComponent";
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import { Whatsapp } from "iconsax-reactjs";
+import { calculateWorkDuration } from "../utils/calculateWorkDuration";
+import { format } from "date-fns";
 
 const CvPage = () => {
   const componentRef = useRef<HTMLElement>(null);
 
   const handlePrint = useReactToPrint({
     contentRef: componentRef,
-    documentTitle: "CV_Muhammad_Elang_Hardifal_" + Date.now(),
+    documentTitle: "CV_Muhammad_Elang_Hardifal_" + format(new Date(), "dd-MMMM-yyyy"),
     pageStyle: `
       @page {
         size: A2;
@@ -91,7 +93,7 @@ const CvPage = () => {
               <li className="flex items-center gap-x-1 text-[11px] md:text-xs">
                 <SquareTerminal className="size-[10px] md:size-3" />
                 <a href="#" target="_blank">
-                  4 Years Experience
+                  {calculateWorkDuration("2021-10-01", "")} Experience
                 </a>
               </li>
             </ul>

@@ -66,14 +66,14 @@ const CvPage = () => {
 
       <section className="max-w-7xl mx-auto p-4" ref={componentRef}>
         {/* ====== PROFILE ====== */}
-        <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 items-center">
           <img src="/assets/img/elang-hero.png" alt="elang_fal" className="size-24 rounded-full object-contain border-2 border-teal-500" />
           <div>
-            <p className="font-semibold text-lg text-center md:text-start">Muhammad Elang Hardifal</p>
-            <p className="text-sm font-light my-1.5 md:my-1 text-center md:text-start">Frontend Engineer</p>
-            <ul className="flex flex-col md:flex-row gap-0.5 md:gap-3 items-center">
-              <li className="flex items-center gap-x-1 text-[11px] md:text-xs">
-                <Whatsapp className="size-[10px] md:size-3" />
+            <p className="font-semibold text-lg text-center sm:text-start">Muhammad Elang Hardifal</p>
+            <p className="text-sm font-light my-1.5 sm:my-1 text-center sm:text-start">Frontend Engineer</p>
+            <ul className="flex flex-col sm:flex-row gap-0.5 sm:gap-3 items-center">
+              <li className="flex items-center gap-x-1 text-[11px] sm:text-xs">
+                <Whatsapp className="size-[10px] sm:size-3" />
                 <a href="https://wa.me/6282115100979" target="_blank">
                   +62 8211-5100-979
                 </a>

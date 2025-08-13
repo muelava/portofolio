@@ -77,7 +77,7 @@ collaborated closely with the backend team to design and integrate APIs for smoo
     logo: "danamart.png",
     jobAs: "Frontend Developer",
     company: "PT. Dana Aguna Nusantara",
-    startDate: "2022-03-01",
+    startDate: "2022-02-01",
     endDate: "2025-05-15",
     techStack: ["Bootstrap", "jQuery", "Rest API", "Figma", "JavaScript", "React Native", "Webpack", "Apache Cordova", "Tailwind Css", "Vue Js", "React Js"],
     description: `Responsible for designing and implementing user interfaces for both web and mobile

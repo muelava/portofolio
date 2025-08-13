@@ -51,7 +51,7 @@ const CvPage = () => {
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 p-3 bg-neutral-900 shadow-xl z-30">
+      <div className="hidden md:block fixed bottom-0 left-0 right-0 p-3 bg-neutral-900 shadow-xl z-30">
         <div className="grid grid-cols-1 gap-x-3 max-w-7xl mx-auto">
           <button onClick={handlePrint} className="flex items-center justify-center gap-2 border border-teal-600 hover:bg-teal-700 text-teal-600 hover:text-white p-4 rounded-lg shadow-lg transition-colors disabled:pointer-events-none disabled:opacity-60">
             <Printer size={16} />

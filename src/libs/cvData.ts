@@ -67,7 +67,7 @@ export const experienceData: ExperienceData[] = [
     startDate: "2025-05-01",
     endDate: "",
     techStack: ["Tailwind Css", "React", "Tauri", "TypeScript", "Zustand", "IndexDB", "Tanstack"],
-    description: `As a Frontend Engineer at Company A, I developed cross-platform desktop applications for
+    description: `As a Frontend Engineer, I developed cross-platform desktop applications for
 Windows and macOS using React and Tauri. I implemented an offline mode feature with local
 database storage, ensuring the app functions without internet connection. Additionally, I built
 a data synchronization mechanism to automatically update data once back online. I

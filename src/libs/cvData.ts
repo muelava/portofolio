@@ -75,7 +75,7 @@ collaborated closely with the backend team to design and integrate APIs for smoo
   },
   {
     logo: "danamart.png",
-    jobAs: "Frontend Developer",
+    jobAs: "Frontend Engineer",
     company: "PT. Dana Aguna Nusantara",
     startDate: "2022-02-01",
     endDate: "2025-05-15",
@@ -104,7 +104,7 @@ frontend technologies.<br/>
   },
   {
     logo: "prokoin.png",
-    jobAs: "Lead Frontend Developer",
+    jobAs: "Lead & Web Designer",
     company: "Prokoin",
     startDate: "2022-01-01",
     endDate: "2024-12-01",
@@ -118,7 +118,7 @@ frontend technologies.<br/>
     jobAs: "UI/UX Designer & Frontend Developer",
     company: "PT. Mitra Fesyen Global",
     startDate: "2021-10-01",
-    endDate: "2022-03-01",
+    endDate: "2022-02-01",
     techStack: ["Figma", "Adobe XD", "Prototyping", "Bootstrap", "Tailwind Css", "jQuery", "Laravel", "Git", "CodeIgniter", "SASS/SCSS"],
     description: `- Designed user interfaces from initial wireframes to high-delity prototypes, ensuring a cohesive and intuitive user experience. <br/>
 - Performed slicing of designs and implemented them directly, collaborating closely with backend developers to ensure seamless integration and functionality. <br/>

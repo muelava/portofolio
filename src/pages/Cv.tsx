@@ -1,16 +1,16 @@
-import { Download, Mail, MapPin, Printer, SquareTerminal } from "lucide-react";
+import { Download, ExternalLink, Mail, MapPin, Printer, SquareTerminal } from "lucide-react";
 import { aboutMe, socialLinks } from "../libs/cvData";
 import ExperienceComponent from "../components/cv/ExperienceComponent";
 import EducationComponent from "../components/cv/EducationComponent";
 import CertificateComponent from "../components/cv/CertificateComponent";
 import SkillComponent from "../components/cv/SkillComponent";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 import { Whatsapp } from "iconsax-reactjs";
 import { calculateWorkDuration } from "../utils/calculateWorkDuration";
 import { format } from "date-fns";
 
-const CvPage = () => {
+const CVContent = () => {
   const componentRef = useRef<HTMLElement>(null);
 
   const handlePrint = useReactToPrint({
@@ -152,6 +152,50 @@ const CvPage = () => {
       </section>
     </>
   );
+};
+
+const CvPage = () => {
+  const [accessCode, setAccessCode] = useState("");
+  const [isValid, setIsValid] = useState(false);
+
+  const handleAccessCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAccessCode(e.target.value);
+  };
+
+  useEffect(() => {
+    if (/muelava/i.test(accessCode)) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
+  }, [accessCode]);
+
+  if (!isValid) {
+    return (
+      <>
+        <div className="max-h-screen h-[90vh] md:block p-3  shadow-xl z-30">
+          <div className="flex flex-col items-center justify-center gap-3 max-w-md m-auto h-full max-h-[80%]">
+            <p className="text-white text-lg font-semibold">Access Code</p>
+            <input autoFocus={true} type="password" placeholder="Access Code" className={`w-full py-4 md:py-4 px-6 bg-neutral-800 text-white border border-neutral-700 rounded-full ${!isValid ? "border-red-500" : ""}`} value={accessCode} onChange={handleAccessCodeChange} />
+            <div className="w-full max-w-[95%] md:max-w-full">
+              <p className="text-sm text-neutral-400 text-center">
+                Don't have an access code? &nbsp;
+                <a href="https://wa.me/6282115100979?text=Hi%20Elang%2C%20I%20would%20like%20to%20request%20an%20access%20code%20for%20your%20CV%20page.%20Thank%20you!" target="_blank" className="text-sm italic text-teal-600 hover:underline">
+                  Contact me on WhatsApp <ExternalLink className="size-3.5 inline" />
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <CVContent />
+      </>
+    );
+  }
 };
 
 export default CvPage;

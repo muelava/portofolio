@@ -176,42 +176,53 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
       <section ref={sectionRefs.projects} id="projects" className="mt-28 px-4" style={{ fontFamily: "Poppins" }}>
         <h3 className="text-4xl font-bold text-center mb-14">Projects</h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {data.map((item: any) => (
-            <div key={item.id}>
-              <div className="w-full h-56 rounded-xl overflow-hidden bg-teal-800/20 hover:bg-teal-800/40 group relative hover:scale-105 transition-all duration-300" style={{ backgroundImage: `url(${item.thumbnails})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center" }}>
-                <div className="w-ful h-full flex flex-col pb-4 transition-all duration-300 group-hover:text-slate-200/50">
-                  {/* <h6 className="font-bold text-lg rounded border-l-4 border-teal-300 ps-3 uppercase mb-2">{item.title}</h6> */}
-                  {/* <p className="opacity-80 text-sm ms-4">{item?.description}</p> */}
-                  {/* <div className="flex gap-3 ms-4 mt-auto flex-wrap">
-                    {item.tech?.map((item: any, i: number) => (
-                      <span key={i} className="text-xs px-1.5 rounded-full py-0.5 font-semibold border border-dashed text-slate-300/60 border-slate-400/50">
-                        {item}
+            <div key={item.id} className="group">
+              <div className="relative rounded-xl overflow-hidden bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-teal-500/20">
+                {/* Thumbnail */}
+                <div className="w-full h-56 bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `url(${item.thumbnails})` }}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+
+                  {/* Overlay Buttons */}
+                  <div className="absolute inset-0 flex gap-3 justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    {item.link?.website && (
+                      <Link to={item.link.website} target="_blank" className="border-2 border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="Visit Website">
+                        <RiExternalLinkFill size={24} />
+                      </Link>
+                    )}
+                    {item.link?.design && (
+                      <Link to={item.link.design} target="_blank" className="border-2 border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="View Design">
+                        <FaFigma size={24} />
+                      </Link>
+                    )}
+                    {item.link?.source && (
+                      <Link to={item.link.source} target="_blank" className="border-2 border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="View Source Code">
+                        <FaGithub size={24} />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-5">
+                  <h4 className="font-bold text-xl text-teal-500 mb-2 group-hover:text-teal-400 transition-colors">{item.title}</h4>
+                  <p className="text-slate-300 text-sm mb-4 opacity-80">{item.description}</p>
+
+                  {/* Tech Stack */}
+                  <div className="flex gap-2 flex-wrap">
+                    {item.tech?.map((tech: string, i: number) => (
+                      <span key={i} className="text-xs px-3 py-1 rounded-full font-medium bg-teal-700/10 text-teal-500 border border-teal-700/30 hover:bg-teal-700/20 transition-colors">
+                        {tech}
                       </span>
                     ))}
-                  </div> */}
+                  </div>
                 </div>
-                {/* <button className="absolute top-0 right-0 bottom-0 left-0 hidden group-hover:flex gap-3 justify-center items-center">
-                  {item.link?.website && (
-                    <Link to={item.link?.website} target="_blank" className="border inline-block border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-2 text-teal-500 hover:text-slate-200 rounded-full">
-                      <HiOutlineLink size={28} />
-                    </Link>
-                  )}
-                  {item.link?.design && (
-                    <Link to={item.link?.design} target="_blank" className="border inline-block border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-2 text-teal-500 hover:text-slate-200 rounded-full">
-                      <FaFigma size={28} />
-                    </Link>
-                  )}
-                  {item.link?.source && (
-                    <Link to={item.link?.source} target="_blank" className="border inline-block border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-2 text-teal-500 hover:text-slate-200 rounded-full">
-                      <IoCodeSlashOutline size={28} />
-                    </Link>
-                  )}
-                </button> */}
               </div>
             </div>
           ))}
         </div>
+
         <div className="text-center">
           <div className="inline-block mt-10">
             <Tertiary link="https://www.prokoin.com/portfolio" target="_blank">

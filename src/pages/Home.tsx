@@ -187,17 +187,17 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
                   {/* Overlay Buttons */}
                   <div className="absolute inset-0 flex gap-3 justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                     {item.link?.website && (
-                      <Link to={item.link.website} target="_blank" className="border-2 border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="Visit Website">
+                      <Link to={item.link.website} target="_blank" className="border border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="Visit Website">
                         <RiExternalLinkFill size={24} />
                       </Link>
                     )}
                     {item.link?.design && (
-                      <Link to={item.link.design} target="_blank" className="border-2 border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="View Design">
+                      <Link to={item.link.design} target="_blank" className="border border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="View Design">
                         <FaFigma size={24} />
                       </Link>
                     )}
                     {item.link?.source && (
-                      <Link to={item.link.source} target="_blank" className="border-2 border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="View Source Code">
+                      <Link to={item.link.source} target="_blank" className="border border-teal-500 hover:scale-110 hover:bg-teal-500 transition-all p-3 text-teal-500 hover:text-white rounded-full backdrop-blur-sm bg-slate-900/50" title="View Source Code">
                         <FaGithub size={24} />
                       </Link>
                     )}

@@ -46,7 +46,7 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
             <br />
             UI/UX <span className="text-teal-500">Designer</span>
           </h2>
-          <p className="opacity-80 font-light leading-normal">I am from Indonesia and I am a Content Creator. I have worked at a financial technology company in Indonesia as a Front-end Developer for over two years. Additionally, I have been freelancing for more than three years, and I am now looking forward to collaborating with you!</p>
+          <p className="opacity-80 font-light leading-normal">Blending technical expertise with creative insight, I am an Indonesian professional with over three years in freelancing and two years as a Front-end Developer at a fintech company. My focus is on crafting seamless user interfaces and compelling content. I look forward to discussing how we can work together.</p>
           <br />
           <div className="flex max-w-xs gap-3">
             <Primary link="mailto:muelava@gmail.com">

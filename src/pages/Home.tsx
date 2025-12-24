@@ -42,9 +42,9 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
               </span>
             </small>
             <br />
-            Web <span className="text-teal-500">Developer</span> &
+            UI/UX <span className="text-teal-500">Designer</span> &
             <br />
-            UI/UX <span className="text-teal-500">Designer</span>
+            Frontend <span className="text-teal-500">Engineer</span>
           </h2>
           <p className="opacity-80 font-light leading-normal">Blending technical expertise with creative insight, I am an Indonesian professional with over three years in freelancing and two years as a Front-end Developer at a fintech company. My focus is on crafting seamless user interfaces and compelling content. I look forward to discussing how we can work together.</p>
           <br />

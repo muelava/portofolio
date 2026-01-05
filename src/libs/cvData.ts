@@ -1,5 +1,6 @@
 export type SocialLink = {
   socialMedia: string;
+  username: string;
   url: string;
 };
 
@@ -34,18 +35,22 @@ export type CertificateData = {
 export const socialLinks: SocialLink[] = [
   {
     socialMedia: "LinkedIn",
-    url: "https://www.linkedin.com/in/muhammad-elang-hardifal-866735169/",
+    username: "Muhammad Elang Hardifal",
+    url: "https://www.linkedin.com/muhammad-elang-hardifal-866735169/",
   },
   {
     socialMedia: "Instagram",
+    username: "@elang_fal",
     url: "https://www.instagram.com/elang_fal/",
   },
   {
     socialMedia: "GitHub",
+    username: "@muelava",
     url: "https://github.com/muelava",
   },
   {
     socialMedia: "Website",
+    username: "elang-hardifal.my.id",
     url: "https://www.elang-hardifal.my.id/",
   },
 ];
@@ -104,7 +109,7 @@ frontend technologies.<br/>
   },
   {
     logo: "prokoin.png",
-    jobAs: "Lead & Web Designer",
+    jobAs: "Lead Frontend Engineer",
     company: "Prokoin",
     startDate: "2022-01-01",
     endDate: "2024-12-01",

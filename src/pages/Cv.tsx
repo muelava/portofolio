@@ -110,8 +110,9 @@ const CVContent = () => {
             {socialLinks.map((item, index) => (
               <div key={index}>
                 <p>{item.socialMedia}</p>
-                <a href={item.url} target="_blank" className="text-xs italic font-light line-clamp-1">
-                  {item.url}
+                <a href={item.url} target="_blank" className="text-xs italic font-light line-clamp-1 flex items-center gap-x-1 group">
+                  {item.username}
+                  <ExternalLink className="size-[10px] md:size-3 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </a>
               </div>
             ))}

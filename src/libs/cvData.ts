@@ -55,14 +55,16 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
-export const aboutMe: string = `I am a professional in web design, frontend development, and web application development with over
-4 years of experience. I specialize in designing and developing intuitive and responsive user interfaces.
-Additionally, I have experience in project management, with strong communication skills in
-coordinating with teams and stakeholders to ensure that each project aligns with its specified
-requirements and goals.
-<br/>
-I am capable of handling complex projects with efficient and innovative solutions and am known for
-resolving UI-related issues while maintaining performance across platforms`;
+// export const aboutMe: string = `I am a professional in web design, frontend development, and web application development with over
+// 4 years of experience. I specialize in designing and developing intuitive and responsive user interfaces.
+// Additionally, I have experience in project management, with strong communication skills in
+// coordinating with teams and stakeholders to ensure that each project aligns with its specified
+// requirements and goals.
+// <br/>
+// I am capable of handling complex projects with efficient and innovative solutions and am known for
+// resolving UI-related issues while maintaining performance across platforms`;
+
+export const aboutMe: string = `Frontend Engineer with 4+ years of experience in web and cross-platform application development, including leading frontend teams and managing end-to-end UI implementation. Skilled in React-based ecosystems, modern styling frameworks, and performance optimization. Known for bridging technical requirements with business goals to deliver high-quality, user-focused products.`;
 
 export const experienceData: ExperienceData[] = [
   {
@@ -174,4 +176,35 @@ export const certificateData: CertificateData[] = [
   },
 ];
 
-export const skillData: string[] = ["Figma", "HTML/CSS", "JavaScript", "Bootstrap", "TailwindCss", "jQuery", "PHP", "React.Js", "Apache Cordova", "GitHub", "GitLab", "MUI", "React Native", "Next.Js", "SASS/SCSS", "TypeScript", "Node.Js", "Firebase", "Ionic", "Capacitor", "Vue.Js", "Redux", "MVC", "Razor", "CodeIgniter", "Laravel"];
+export const skillData: string[] = [
+  "Figma",
+  "HTML/CSS",
+  "JavaScript",
+  "Bootstrap",
+  "TailwindCss",
+  "Shadcn UI",
+  "jQuery",
+  "PHP",
+  "React.Js",
+  "Tanstack",
+  "Apache Cordova",
+  "GitHub",
+  "GitLab",
+  "MUI",
+  "React Native",
+  "Next.Js",
+  "SASS/SCSS",
+  "TypeScript",
+  "Node.Js",
+  "Firebase",
+  "Supabase",
+  "Ionic Framework",
+  "Capacitor",
+  "Vue.Js",
+  "Astro Js",
+  "Redux",
+  "Zustand",
+  "MVC",
+  "CodeIgniter",
+  "Laravel",
+];

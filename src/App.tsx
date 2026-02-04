@@ -16,7 +16,7 @@ import CvPage from "./pages/Cv";
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
 
-  const sectionRefs: any = {
+  const sectionRefs: Record<string, React.RefObject<HTMLDivElement>> = {
     home: useRef<HTMLDivElement>(null),
     projects: useRef<HTMLDivElement>(null),
     skills: useRef<HTMLDivElement>(null),

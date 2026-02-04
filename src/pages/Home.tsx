@@ -11,23 +11,18 @@ import {
   IoLogoCapacitor,
 } from "react-icons/io5";
 import { TbBrandReactNative } from "react-icons/tb";
-import { portofolio } from "../utils/constants";
+import { portofolio, PortfolioItem } from "../utils/constants";
 // import { HiOutlineLink } from "react-icons/hi";
 import SplitText from "../components/Splite";
 import GradientText from "../components/GradientText";
 import { Eye } from "lucide-react";
 
 interface HomeProps {
-  sectionRefs: {
-    home: React.RefObject<HTMLDivElement>;
-    projects: React.RefObject<HTMLDivElement>;
-    skills: React.RefObject<HTMLDivElement>;
-    certificates: React.RefObject<HTMLDivElement>;
-  };
+  sectionRefs: Record<string, React.RefObject<HTMLDivElement>>;
 }
 
 const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
-  const data: any = portofolio();
+  const data = portofolio();
 
   return (
     <>
@@ -177,7 +172,7 @@ const Home: React.FC<HomeProps> = ({ sectionRefs }) => {
         <h3 className="text-4xl font-bold text-center mb-14">Projects</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {data.map((item: any) => (
+          {data.map((item: PortfolioItem) => (
             <div key={item.id} className="group">
               <div className="relative rounded-xl overflow-hidden bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-teal-500/20">
                 {/* Thumbnail */}

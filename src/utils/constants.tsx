@@ -1,4 +1,17 @@
-const portofolio = () => [
+export interface PortfolioItem {
+  id: number;
+  thumbnails: string;
+  title: string;
+  description: string;
+  link: {
+    website: string | null;
+    design: string | null;
+    source: string | null;
+  };
+  tech: string[];
+}
+
+const portofolio = (): PortfolioItem[] => [
   {
     id: 1,
     thumbnails: "/assets/img/project-satu-ilmu.png",
@@ -72,7 +85,7 @@ const portofolio = () => [
     tech: ["Figma", "Ionic", "Typescript", "React", "Tailwind Css"],
   },
   {
-    id: 6,
+    id: 7,
     thumbnails: "/assets/img/project-prowedding.png",
     title: "Prowedding",
     description: "Wedding Organizer",

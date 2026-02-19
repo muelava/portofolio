@@ -68,11 +68,23 @@ export const aboutMe: string = `Frontend Engineer with 4+ years of experience in
 
 export const experienceData: ExperienceData[] = [
   {
+    logo: "mjt.png",
+    jobAs: "Frontend Developer",
+    company: "Metrocomm Jaddi Technology (Placement: Bank BTN)",
+    startDate: "2025-10-01",
+    endDate: "",
+    techStack: ["Next.js", "Node.js", "Pure CSS", "CSS Modules", "TypeScript", "REST API", "PWA"],
+    description: `Developing "Bank as a Service" (BaaS), a Banking-as-a-Service solution for Bank BTN. I am responsible for building high-performance Progressive Web Applications (PWA) designed for seamless integration into partner ecosystems. <br/>
+- Implementing a custom styling architecture using Pure CSS and CSS Modules to ensure lightweight bundle sizes and pixel-perfect design consistency without external UI frameworks. <br/>
+- Developing scalable frontend components with Next.js and TypeScript, focusing on reusability across different partner platforms. <br/>
+- Managing backend service integrations via Node.js to bridge core banking systems with the frontend application. <br/>`,
+  },
+  {
     logo: "stafbook.png",
     jobAs: "Frontend Engineer",
-    company: "Staf Book",
+    company: "Staf Book (Placement: Biro Klasifikasi Indonesia)",
     startDate: "2025-05-01",
-    endDate: "",
+    endDate: "2025-10-01",
     techStack: ["Tailwind Css", "React", "Tauri", "TypeScript", "Zustand", "IndexDB", "Tanstack"],
     description: `As a Frontend Engineer, I developed cross-platform desktop applications for
 Windows and macOS using React and Tauri. I implemented an offline mode feature with local
@@ -86,7 +98,7 @@ collaborated closely with the backend team to design and integrate APIs for smoo
     company: "PT. Dana Aguna Nusantara",
     startDate: "2022-02-01",
     endDate: "2025-05-15",
-    techStack: ["Bootstrap", "jQuery", "Rest API", "Figma", "JavaScript", "React Native", "Webpack", "Apache Cordova", "Tailwind Css", "Vue Js", "React Js"],
+    techStack: ["jQuery", "Rest API", "Figma", "JavaScript", "React Native", "Webpack", "Apache Cordova", "Tailwind Css", "Vue Js", "React Js"],
     description: `Responsible for designing and implementing user interfaces for both web and mobile
 applications, ensuring they are visually appealing, responsive, and functionally robust.
 Collaborate with cross-functional teams to translate project requirements into high quality

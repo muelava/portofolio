@@ -100,7 +100,7 @@ const CVContent = () => {
           </div>
         </div>
 
-        <br />
+        <br className="print:hidden" />
         <br />
 
         {/* ====== SOCIAL LINKS ====== */}
@@ -120,7 +120,7 @@ const CVContent = () => {
         </div>
 
         <br />
-        <br />
+        <br className="print:hidden" />
 
         {/* ====== ABOUT ME ====== */}
         <div>
@@ -128,25 +128,25 @@ const CVContent = () => {
           <article className="text-sm prose leading-6" dangerouslySetInnerHTML={{ __html: aboutMe }} />
         </div>
 
-        <br />
+        <br className="print:hidden" />
         <br />
 
         {/* ====== EXPERIENCES ====== */}
         <ExperienceComponent />
 
-        <br />
+        <br className="print:hidden" />
         <br />
 
         {/* ====== EDUCATIONS ====== */}
         <EducationComponent />
 
-        <br />
+        <br className="print:hidden" />
         <br />
 
         {/* ====== CERTIFICATIONS ====== */}
         <CertificateComponent />
 
-        <br />
+        <br className="print:hidden" />
         <br />
         {/* ====== SKILLS ====== */}
         <SkillComponent />

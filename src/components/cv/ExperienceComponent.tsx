@@ -28,7 +28,7 @@ const ExperienceComponent = () => {
       {sortedExperiences.map((experience, index) => (
         <div key={index}>
           {/* special case - page break */}
-          {experience.company === "Prokoin" && <div className="print-break" />}
+          {/* {experience.company === "Prokoin" && <div className="print-break" />} */}
 
           {/* render item */}
           <div className="flex gap-x-3 mb-8">

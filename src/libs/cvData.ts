@@ -68,11 +68,23 @@ export const aboutMe: string = `Frontend Engineer with 4+ years of experience in
 
 export const experienceData: ExperienceData[] = [
   {
+    logo: "Prudential-Logo.png",
+    jobAs: "Mobile Developer",
+    company: "PT Prudential Life Assurance",
+    startDate: "2026-03-04",
+    endDate: "",
+    techStack: ["React Native", "Redux", "SQLite", "TypeScript", "REST API"],
+    description: `Responsible for managing and developing the PruFast mobile application for both iOS and Android platforms using React Native and Redux. <br/>
+- Handled highly complex project requirements, including the end-to-end development of new insurance products. <br/>
+- Revamped the Illustration Template (ITS) and restructured the project folders to establish a more modular and reusable architecture. <br/>
+- Collaborated with cross-functional teams to deliver a robust and high-performance user experience. <br/>`,
+  },
+  {
     logo: "mjt.png",
     jobAs: "Frontend Developer",
     company: "Metrocomm Jaddi Technology (Placement: Bank BTN)",
     startDate: "2025-10-01",
-    endDate: "",
+    endDate: "2025-03-03",
     techStack: ["Next.js", "Node.js", "Pure CSS", "CSS Modules", "TypeScript", "REST API", "PWA"],
     description: `Developing "Bank as a Service" (BaaS), a Banking-as-a-Service solution for Bank BTN. I am responsible for building high-performance Progressive Web Applications (PWA) designed for seamless integration into partner ecosystems. <br/>
 - Implementing a custom styling architecture using Pure CSS and CSS Modules to ensure lightweight bundle sizes and pixel-perfect design consistency without external UI frameworks. <br/>
